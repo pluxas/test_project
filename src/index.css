@@ -3,29 +3,30 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-backgraund: #000;
-    --color-input: #4F4F4F;
-    --color-days: #2E3035;  
-    --color-text: #fff;
-    --color-text-weather: #939CB0;
-    --color-text-logo: #4793FF;
+  --color-backgraund: #000;
+  --color-input: #4f4f4f;
+  --color-today-bg: #B4B4B440;
+  --color-days: #2e3035;
+  --color-text: #fff;
+  --color-text-weather: #939cb0;
+  --color-text-logo: #4793ff;
+  --shadow-today: 2px 5px 25px -3px rgba(34, 60, 80, 0.2);
+
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+.bg-custom {
+  background-image: url('/src/shared/assets/images/Cloud-image.png');
+  background-position: right top;
+  background-repeat: no-repeat;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
 }

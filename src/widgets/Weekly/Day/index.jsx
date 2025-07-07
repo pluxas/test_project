@@ -12,18 +12,14 @@ const Day = ({ data }) => {
 
   return (
     <div className='p-3 bg-[#4793FF33] rounded-xl dark:bg-days sm:w-37 mt-5 flex sm:block items-center justify-between w-full'>
+      <h1 className='font-medium text-lg text-black dark:text-white mb-1.5'>{getUnix('weekday')}</h1>
+      <p className='font-normal text-sm text-text-weather'>{getUnix('day')} {getUnix('month')}</p>
       <div>
-        <h1 className='font-medium text-lg text-black dark:text-white mb-1.5'>{getUnix('weekday')}</h1>
-        <p className='font-normal text-sm text-text-weather'>{getUnix('day')} {getUnix('month')}</p>
+        <GlobalSvgIcons id={data.day.condition.text} />
       </div>
-      <div>
-        <div>
-          <GlobalSvgIcons id={data.day.condition.text} />
-        </div>
-        <div className='flex flex-col '>
-          <h2 className='font-medium text-lg text-black dark:text-white'>{data.day.maxtemp_c}°</h2>
-          <h2 className='font-normal text-sm text-text-weather'>{data.day.mintemp_c}°</h2>
-        </div>
+      <div className='flex items-center gap-5 sm:flex-col sm:gap-0 sm:items-start'>
+        <h2 className='font-medium text-lg text-black dark:text-white'>{Math.round(data.day.maxtemp_c)}°</h2>
+        <h2 className='font-normal text-sm text-text-weather'>{Math.round(data.day.mintemp_c)}°</h2>
       </div>
     </div>
   )

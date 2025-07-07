@@ -27,9 +27,9 @@ const Today = () => {
     return (
         <div className='sm:flex items-center justify-between mt-8 gap-13 block'>
             <div className='p-7 dark:bg-today-bg shadow-today rounded-3xl'>
-                <div className='flex items-center gap-10'>
+                <div className='flex items-center gap-10 justify-between'>
                     <div>
-                        <h1 className='font-medium text-8xl text-text-logo'>{todaysWeather.current.temp_c}°</h1>
+                        <h1 className='font-medium text-8xl text-text-logo'>{Math.round(todaysWeather.current.temp_c)}°</h1>
                         <h3 className='text-black font-normal text-4xl dark:text-white'>Сегодня</h3>
                     </div>
                     <GlobalSvgIconsTwo id={todaysWeather.current.condition.text}/>
